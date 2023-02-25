@@ -22,7 +22,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
-    url="https://nuclia.com",
+    url="https://github.com/vangheem/memorylru",
     license="BSD",
     setup_requires=[],
     zip_safe=True,

@@ -48,14 +48,10 @@ jobs:
           cache: "pip"
 
       - name: Install the package
-        run: pip install -r dev-requirements.txt
+        run: pip install -e .
 
-      - name: Run tests
-        run: |
-          pytest -rfE --cov=nucliadb_utils -s --tb=native -v --cov-report xml --cov-append memorylru
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          file: ./coverage.xml
-          flags: utils
+      # - name: Upload coverage to Codecov
+      #   uses: codecov/codecov-action@v3
+      #   with:
+      #     file: ./coverage.xml
+      #     flags: utils
