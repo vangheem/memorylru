@@ -17,6 +17,7 @@ setup(
     name="memorylru",
     version="1.0.0",
     long_description=README,
+    long_description_content_type="text/markdown",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Programming Language :: Python :: 3.7",
