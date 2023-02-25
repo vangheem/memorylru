@@ -14,15 +14,6 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v3.1.0
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: "pip"
-
-      - name: Install package
-        run: |
-          pip install -r dev-requirements.txt
       - name: Run pre-checks
         run: |
           flake8 memorylru
@@ -40,12 +31,6 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
-
-      - name: Setup Python
-        uses: actions/setup-python@v3.1.0
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: "pip"
 
       - name: Install the package
         run: pip install -e .
