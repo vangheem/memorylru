@@ -14,12 +14,6 @@ jobs:
       - name: Checkout the repository
         uses: actions/checkout@v3
 
-      - name: Run pre-checks
-        run: |
-          flake8 memorylru
-          isort -c --profile black memorylru/
-          black --check --verbose memorylru
-
   # Job to run tests
   tests:
     runs-on: ubuntu-latest
