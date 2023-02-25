@@ -15,7 +15,7 @@ if system() != "Windows":
 
 setup(
     name="memorylru",
-    version="1.0.0",
+    version="1.0.1",
     long_description=README,
     long_description_content_type="text/markdown",
     classifiers=[
