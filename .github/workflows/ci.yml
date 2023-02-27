@@ -1,6 +1,10 @@
 name: Test and lint
 
-on: [push]
+on:
+  workflow_run:
+    workflows: ["Blah test name"]
+    types:
+      - completed
 
 jobs:
   # Job to run pre-checks
@@ -20,14 +24,6 @@ jobs:
         python-version: [3.9]
 
     steps:
-      - name: Wait for
-        uses: lewagon/wait-on-check-action@v1.3.1
-        with:
-          ref: ${{ github.ref }}
-          check-name: "Blah test name"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          wait-interval: 10
-
       - name: Checkout the repository
         uses: actions/checkout@v3
 
