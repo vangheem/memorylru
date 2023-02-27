@@ -1,0 +1,12 @@
+name: Blah test
+
+on: [push]
+
+jobs:
+  # Job to run pre-checks
+  pre-checks:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
