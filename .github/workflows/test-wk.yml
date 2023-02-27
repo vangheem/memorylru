@@ -1,6 +1,9 @@
 name: Blah test
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   # Job to run pre-checks
