@@ -33,9 +33,3 @@ jobs:
 
       - name: Install the package
         run: pip install -e .
-
-      # - name: Upload coverage to Codecov
-      #   uses: codecov/codecov-action@v3
-      #   with:
-      #     file: ./coverage.xml
-      #     flags: utils
