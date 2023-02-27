@@ -3,7 +3,7 @@ name: Test and lint
 on:
   workflow_dispatch:
   workflow_run:
-    workflows: ["Blah test"]
+    workflows: [blah]
     types:
       - completed
 

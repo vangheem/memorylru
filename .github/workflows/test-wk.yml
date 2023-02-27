@@ -1,4 +1,4 @@
-name: Blah test
+name: blah
 
 on: [push]
 
