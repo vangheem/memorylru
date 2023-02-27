@@ -1,4 +1,4 @@
-name: blah
+name: Blah test
 
 on: [push]
 
@@ -10,3 +10,6 @@ jobs:
     steps:
       - name: Checkout the repository
         uses: actions/checkout@v3
+
+      - name: sleep
+        run: sleep 300
