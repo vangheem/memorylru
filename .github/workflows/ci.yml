@@ -3,7 +3,6 @@ name: Test and lint
 on:
   workflow_run:
     workflows: ["Blah test"]
-    branches: [main]
 
 jobs:
   # Job to run pre-checks
