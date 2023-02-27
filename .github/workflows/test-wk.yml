@@ -5,6 +5,7 @@ on: [push]
 jobs:
   # Job to run pre-checks
   pre-checks:
+    name: "Blah test name"
     runs-on: ubuntu-latest
 
     steps:
