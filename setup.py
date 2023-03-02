@@ -5,7 +5,7 @@ from setuptools import Extension, find_packages, setup
 README = open("README.md").read()
 
 
-lru_module = Extension("memorylru.lru", sources=["memorylru/lru.c"])
+lru_module = Extension("memorylru._lru", sources=["memorylru/_lru.c"])
 
 
 extensions = []
@@ -15,7 +15,7 @@ if system() != "Windows":
 
 setup(
     name="memorylru",
-    version="1.0.4",
+    version="1.0.5",
     long_description=README,
     long_description_content_type="text/markdown",
     classifiers=[

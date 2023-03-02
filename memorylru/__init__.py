@@ -1,3 +1,3 @@
-from memorylru.lru import LRU
+from memorylru._lru import LRU
 
 __all__ = ("LRU",)

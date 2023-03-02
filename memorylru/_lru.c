@@ -683,7 +683,7 @@ PyDoc_STRVAR(lru_doc,
 
 static PyTypeObject LRUType = {
     PyVarObject_HEAD_INIT(NULL, 0)
-    "lru.LRU",               /* tp_name */
+    "_lru.LRU",               /* tp_name */
     sizeof(LRU),             /* tp_basicsize */
     0,                       /* tp_itemsize */
     (destructor)LRU_dealloc, /* tp_dealloc */
