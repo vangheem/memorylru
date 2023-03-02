@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build ${{ matrix.platform || matrix.os }} (${{ matrix.target }} - ${{ matrix.manylinux || 'auto' }})
+    name: Build ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
@@ -17,8 +17,12 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - run: pip install -U pip
+
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.12.0
+        env:
+          CIBW_ARCHS_MACOS: x86_64 arm64
 
       - uses: actions/upload-artifact@v3
         with:
